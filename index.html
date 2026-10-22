@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html{color-scheme:light dark}body{margin:0}</style>
+<title>Yash Chauhan Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: formal curriculum-vitae page. Name and contact line at the top, then hairline-ruled sections with a narrow heading column that stacks above the content on phones. */
+:root {
+  --bg: #F6F7F9;
+  --ink: #1B2430;
+  --muted: #566170;
+  --rule: #CFD5DC;
+  --accent: #1F3A5F;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12171E; --ink: #E7EAEE; --muted: #9DA8B5; --rule: #2C3541; --accent: #9DBBE3;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12171E; --ink: #E7EAEE; --muted: #9DA8B5; --rule: #2C3541; --accent: #9DBBE3;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16.5px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 56px 64px;
+}
+.page { max-width: 880px; margin: 0 auto; }
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Masthead */
+.masthead { padding-bottom: 28px; border-bottom: 2px solid var(--ink); }
+h1 { font-family: var(--font-serif); font-weight: 600; font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.1; letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance; }
+.title { font-family: var(--font-serif); font-size: 1.15rem; color: var(--muted); margin: 0 0 20px; }
+.contact { display: flex; flex-wrap: wrap; gap: 4px 26px; margin: 0; padding: 0; list-style: none; font-size: 15px; }
+.contact li { min-width: 0; overflow-wrap: anywhere; }
+
+/* Sections */
+section { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 10px 36px; padding: 30px 0; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: 0; }
+h2 { font-family: var(--font-serif); font-size: 1.02rem; font-weight: 700; letter-spacing: 0.02em; margin: 3px 0 0; color: var(--ink); }
+.content { display: flex; flex-direction: column; gap: 26px; min-width: 0; }
+.content > p { margin: 0; max-width: 64ch; }
+
+.entry { display: flex; flex-direction: column; gap: 8px; }
+.entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 20px; }
+h3 { font-family: var(--font-serif); font-size: 1.18rem; font-weight: 600; line-height: 1.3; margin: 0; text-wrap: balance; }
+.date { color: var(--muted); font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sub { color: var(--muted); margin: 0; font-style: italic; font-family: var(--font-serif); }
+ul.pts { margin: 4px 0 0; padding-left: 1.15em; display: flex; flex-direction: column; gap: 6px; max-width: 70ch; }
+.stack { margin: 4px 0 0; font-size: 15px; color: var(--muted); max-width: 70ch; }
+.stack b { color: var(--ink); font-weight: 600; }
+
+dl.skills { margin: 0; display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 10px 24px; }
+dl.skills dt { font-weight: 600; }
+dl.skills dd { margin: 0; }
+
+.plain { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.plain li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 20px; min-width: 0; }
+.plain span.what { min-width: 0; }
+.plain small { display: block; color: var(--muted); font-size: 15px; }
+
+footer { margin-top: 12px; padding-top: 18px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; }
+
+@media (max-width: 720px) {
+  body { padding-block: 36px 44px; font-size: 16px; }
+  section { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 24px 0; }
+  h2 { margin: 0; }
+  dl.skills { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  dl.skills dd { margin-bottom: 12px; }
+}
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <h1>Yash Vardhan Singh Chauhan</h1>
+    <p class="title">Computer Science and Engineering student. Distributed systems and applied machine learning.</p>
+    <ul class="contact">
+      <li>yashchauhan8463@gmail.com</li>
+      <li>8815514587</li>
+      <li><a href="https://github.com/YxshChauhan" target="_blank" rel="noopener">github.com/YxshChauhan</a></li>
+      <li><a href="https://drive.google.com/drive/folders/12DpkjJHHUHBl75bsME_ZS71DRtn0bxJX" target="_blank" rel="noopener">Certificates</a></li>
+    </ul>
+  </header>
+
+  <section id="profile">
+    <h2>Profile</h2>
+    <div class="content">
+      <p>B.Tech student in Software Engineering with research internship experience at Samsung Research India. Work spans fault-tolerant data transfer, cloud-native microservices on Kubernetes, and deep learning inference services. Holds AWS Certified AI Practitioner and Cloud Practitioner credentials.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="content">
+      <div class="entry">
+        <div class="entry-head">
+          <h3>SRM Institute of Science and Technology, Kattankulathur</h3>
+          <span class="date">2023 &ndash; Ongoing</span>
+        </div>
+        <p class="sub">B.Tech, Computer Science and Engineering (Software Engineering)</p>
+        <p class="stack"><b>CGPA</b> 8.73 / 10</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="content">
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Samsung Research India</h3>
+          <span class="date">Jun 2025 &ndash; Dec 2025</span>
+        </div>
+        <p class="sub">PRISM Research Intern, Bangalore</p>
+        <ul class="pts">
+          <li>Designed and built a cross-platform, distributed file transfer system for scalable, high-volume data movement between iOS and Android devices.</li>
+          <li>Engineered fault-tolerant transmission pipelines over Wi-Fi and Bluetooth, applying data structures and algorithms to ensure data integrity, secure delivery and reliability at scale.</li>
+          <li>Collaborated with a research team through design iterations, code review and testing cycles, improving system reliability and operational quality.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="content">
+      <div class="entry">
+        <div class="entry-head">
+          <h3>AudifyX: Cloud-Native Video-to-Audio Microservices Platform</h3>
+          <span class="date">Mar 2026 &ndash; Present</span>
+        </div>
+        <ul class="pts">
+          <li>Architected and deployed a scalable, fault-tolerant microservices platform on AWS EKS, using Helm charts for repeatable, versioned CI/CD releases.</li>
+          <li>Built asynchronous, horizontally scalable processing pipelines on RabbitMQ to handle high-throughput job queues in a distributed environment.</li>
+          <li>Designed a PostgreSQL schema for persistent job and state tracking, and used Docker to keep local and production environments consistent.</li>
+        </ul>
+        <p class="stack"><b>Technologies:</b> Kubernetes (AWS EKS), Docker, Helm, RabbitMQ, PostgreSQL, SQL, AWS, Python</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Brain Tumor Detection, Classification and Segmentation Pipeline</h3>
+          <span class="date">Feb 2026 &ndash; Present</span>
+        </div>
+        <ul class="pts">
+          <li>Designed a relational data model and PostgreSQL schema to store MRI scan metadata and prediction outputs for reliable downstream analysis and reporting.</li>
+          <li>Built a ResUNet deep learning inference pipeline and applied object-oriented design to expose clean, maintainable REST APIs for detection, classification and segmentation.</li>
+          <li>Containerized the service with Docker for reproducible deployment, and used MLflow to track experiment runs and model versions.</li>
+        </ul>
+        <p class="stack"><b>Technologies:</b> Python, SQL, PostgreSQL, PyTorch, OpenCV, ResUNet, REST APIs, Docker, MLflow, Git</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="repositories">
+    <h2>Repositories</h2>
+    <div class="content">
+      <ul class="plain">
+        <li><span class="what"><a href="https://github.com/YxshChauhan/Samsung-PRISM" target="_blank" rel="noopener">Samsung-PRISM</a><small>Cross-platform file transfer work from the Samsung Research India internship</small></span></li>
+        <li><span class="what"><a href="https://github.com/YxshChauhan?tab=repositories" target="_blank" rel="noopener">Brain Tumor Detection</a><small>Detection, classification and segmentation pipeline</small></span></li>
+        <li><span class="what"><a href="https://github.com/YxshChauhan?tab=repositories" target="_blank" rel="noopener">AudifyX</a><small>Cloud-native video-to-audio microservices platform</small></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="content">
+      <dl class="skills">
+        <dt>Languages</dt><dd>Python, Java, C, JavaScript, SQL, HTML, CSS</dd>
+        <dt>Core fundamentals</dt><dd>Data structures and algorithms, object-oriented design, computer networks, operating systems, system design, SDLC</dd>
+        <dt>Distributed systems and cloud</dt><dd>AWS, Kubernetes, Docker, Helm, RabbitMQ, microservices, CI/CD</dd>
+        <dt>Frameworks and databases</dt><dd>React.js, Node.js, FastAPI, REST APIs, PyTorch, OpenCV, PostgreSQL, MySQL, DBMS/RDBMS</dd>
+        <dt>Tools</dt><dd>Git, GitHub, MLflow</dd>
+        <dt>AI-assisted development</dt><dd>Claude Code, Cursor</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications and Awards</h2>
+    <div class="content">
+      <ul class="plain">
+        <li><span class="what">AWS Certified AI Practitioner, Amazon Web Services</span><span class="date">Jan 2026</span></li>
+        <li><span class="what">AWS Certified Cloud Practitioner, Amazon Web Services</span><span class="date">Jan 2026</span></li>
+        <li><span class="what">Anti-Sleep Alarm<small>Recognised by the Department of Physics and Nanotechnology, SRM Institute of Science and Technology, for designing a drowsiness-detection alarm system</small></span><span class="date">Apr 2024</span></li>
+      </ul>
+      <p><a href="https://drive.google.com/drive/folders/12DpkjJHHUHBl75bsME_ZS71DRtn0bxJX" target="_blank" rel="noopener">View certificate documents</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Yash Vardhan Singh Chauhan</span>
+    <span>yashchauhan8463@gmail.com &middot; 8815514587</span>
+  </footer>
+</div>
+
+</body>
+</html>
